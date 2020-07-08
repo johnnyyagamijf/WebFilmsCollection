@@ -1,0 +1,54 @@
+﻿@model List<WebFilmsCollection.Application.ViewModels.FilmesViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="imagem">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" class="google">
+    </div>
+   
+    <div class="container">
+
+        <h1 class="my-5 text-center text-lg-left">Filmes</h1>
+        <div class="row text-center text-lg-left">
+            @foreach (var item in Model)
+            {
+                <!-- Page Content -->
+
+                <div class="col-lg-2 col-md-5 col-xs-6">
+                    <a href="#" class="d-block mb-5 h-100">
+                        <img class="img-fluid img-thumbnail" id="imagem" src="@Url.Content(item.thumbnail)" alt="">
+                    </a>
+                </div>
+
+            }
+        </div>
+    </div>
+    <style>
+        #imagem {
+            width: 150px;
+            height: 150px;
+        }
+
+        body {
+            background-color: black;
+        }
+        .google{
+            margin-right:auto;
+            margin-left:auto;
+        }
+        .imagem {
+            text-align: center;
+        }
+    </style>
+</body>
+</html>
+
+<
+
